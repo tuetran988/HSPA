@@ -1,12 +1,22 @@
-<div class="row">
-  <div class="shadow-lg col-sm-3 p-3">
-    <div class="card" style="width: 100%">
-      <img src="assets/images/tiger.jpg" alt="" class="propImg" />
-      <div class="card-body p-2">
-        <h1>{{ Property.Name }}</h1>
-        <h2>{{ Property.Type }}</h2>
-        <h3>{{ Property.Price }}</h3>
-      </div>
-    </div>
+<div class="card" style="width: 100%">
+  <div class="card-img-wrapper">
+    <img src="assets/images/tiger.jpg" alt="" class="card-img-top" />
+    <ul class="list-inline text-center member-icons animate">
+      <li class="list-inline-item">
+        <button class="btn btn-primary">
+          <i class="far fa-edit"></i>
+        </button>
+      </li>
+      <li class="list-inline-item">
+        <button class="btn btn-primary">
+          <i class="far fa-address-book"></i>
+        </button>
+      </li>
+    </ul>
+  </div>
+  <div class="card-body p-2">
+    <h1>{{ Property.Name }}</h1>
+    <h2>{{ Property.Type }}</h2>
+    <h3>{{ Property.Price }}</h3>
   </div>
 </div>
