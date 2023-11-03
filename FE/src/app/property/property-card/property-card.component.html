@@ -1,6 +1,7 @@
 <div class="card" style="width: 100%">
   <div class="card-img-wrapper">
-    <img src="assets/images/tiger.jpg" alt="" class="card-img-top" />
+    <img *ngIf="Property.Image" src="assets/images/{{Property.Image}}.jpg" alt="" class="card-img-top" />
+    <img *ngIf="!Property.Image" src="assets/images/house-default.jpg" alt="" class="card-img-top" />
     <ul class="list-inline text-center member-icons animate">
       <li class="list-inline-item">
         <button class="btn btn-primary">
