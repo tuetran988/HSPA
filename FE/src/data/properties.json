@@ -1,36 +1,47 @@
 [
   {
     "Id": 1,
+    "SellRent":1,
     "Name": "Tiger",
     "Type": "House",
-    "Price": 12000
+    "Price": 12000,
+    "Image":"prop-1"
   },
   {
     "Id": 2,
+    "SellRent":1,
     "Name": "Horse",
     "Type": "House",
-    "Price": 22000
+    "Price": 22000,
+    "Image":"prop-2"
   },
   {
     "Id": 3,
+    "SellRent":1,
     "Name": "Mountain",
     "Type": "House",
-    "Price": 32000
+    "Price": 32000,
+    "Image":"prop-3"
   },
   {
     "Id": 4,
+    "SellRent":2,
     "Name": "Tree",
     "Type": "House",
-    "Price": 42000
+    "Price": 42000,
+    "Image":"prop-4"
   },
   {
     "Id": 5,
+    "SellRent":1,
     "Name": "Water",
     "Type": "House",
-    "Price": 52000
+    "Price": 52000,
+    "Image":"prop-5"
   },
   {
     "Id": 6,
+    "SellRent":2,
     "Name": "Fish",
     "Type": "House",
     "Price": 92000
