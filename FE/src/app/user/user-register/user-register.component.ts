@@ -9,7 +9,7 @@ import {
 } from '@angular/forms';
 import { User } from 'src/app/model/user';
 import { UserService } from 'src/app/services/user.service';
-
+import { AlertifyService } from 'src/app/services/alertify.service';
 @Component({
   selector: 'app-user-register',
   templateUrl: './user-register.component.html',
@@ -19,7 +19,11 @@ export class UserRegisterComponent implements OnInit {
   registerationForm!: FormGroup;
   user: User = {};
   userSubmitted: Boolean = false;
-  constructor(private fb: FormBuilder, private userService: UserService) {}
+  constructor(
+    private fb: FormBuilder,
+    private userService: UserService,
+    private alertify: AlertifyService
+  ) {}
   ngOnInit() {
     // this.registerationForm = new FormGroup({
     //   userName: new FormControl('', Validators.required),
@@ -85,14 +89,17 @@ export class UserRegisterComponent implements OnInit {
       this.userService.addUser(this.userData());
       this.registerationForm.reset();
       this.userSubmitted = false;
+      this.alertify.success('register successfully');
+    } else {
+      this.alertify.error('register failed');
     }
   }
-  userData() : User {
-     return this.user = {
-        userName : this.userName.value,
-        email : this.email.value,
-        password : this.password.value,
-        mobile : this.mobile.value, 
-     }
+  userData(): User {
+    return (this.user = {
+      userName: this.userName.value,
+      email: this.email.value,
+      password: this.password.value,
+      mobile: this.mobile.value,
+    });
   }
 }
