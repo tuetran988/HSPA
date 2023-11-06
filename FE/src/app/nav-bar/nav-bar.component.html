@@ -59,9 +59,17 @@
               >Login</a
             >
           </li>
-          <li class="nav-item" *ngIf="loggedin()">
-            <a class="nav-link" (click)="onLogout()">Logout</a>
-          </li>
+          <div class="dropdown" *ngIf="loggedin()">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+             Wellcome {{loggedInUser}}
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li><span class="dropdown-item" >View Dashboard</span></li>
+              <li><span class="dropdown-item" >My Profile</span></li>
+              <li><span class="dropdown-item" >Change password</span></li>
+              <li><span class="dropdown-item" (click)="onLogout()">Logout</span></li>
+            </ul>
+          </div>
         </ul>
       </div>
     </div>
