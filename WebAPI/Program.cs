@@ -1,5 +1,6 @@
 using WebAPI.Data;
 using WebAPI.Data.Repo;
+using WebAPI.Interfaces;
 
 namespace WebAPI
 {
@@ -17,7 +18,7 @@ namespace WebAPI
             builder.Services.AddSwaggerGen();
             builder.Services.AddDataBaseService(builder.Configuration.GetConnectionString("MyCnn"));
             
-            builder.Services.AddScoped<ICityRepository, CityRepository>();
+            builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
             var app = builder.Build();
 
